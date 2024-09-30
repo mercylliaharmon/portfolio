@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "build/server/index.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "build/client/index.js",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build/client"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/build/server/index.js"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "YOUR_ENV_VARIABLE": "value"
+  }
+}
