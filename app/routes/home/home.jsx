@@ -48,8 +48,8 @@ export const links = () => {
 
 export const meta = () => {
   return baseMeta({
-    title: 'App Engineer + Solution Architect',
-    description: `Design portfolio of ${config.name} — a mobile app engineer working on web & mobile apps with a focus on motion, experience design, and accessibility.`,
+    title: 'Sr. Web Engineer',
+    description: `Design portfolio of ${config.name} — a web engineer working on frontend & backend with a focus on motion, experience design, and accessibility.`,
   });
 };
 
@@ -141,7 +141,7 @@ export const Home = () => {
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
         title="Bartesian: The World’s Top-Selling Cocktail System"
-        description="Developed the mobile companion app for Bartesian, the award-winning cocktail maker that allows users to create premium cocktails at home. The app enhances the user experience by providing recipe suggestions, smart device connectivity, and automated cocktail customization based on user preferences."
+        description="Developed the website for Bartesian, the award-winning cocktail maker that allows users to create premium cocktails at home. The website enhances the user experience by providing recipe suggestions, smart device connectivity, and automated cocktail customization based on user preferences."
         buttonText="View project"
         buttonLink="https://bartesian.com/ "
         model={{
@@ -165,7 +165,7 @@ export const Home = () => {
         visible={visibleSections.includes(projectThree.current)}
         index={3}
         title="WildTrackAI: Protecting Endangered Species"
-        description="Engineered the mobile platform for WildTrackAI, enabling real-time tracking and monitoring of endangered species through footprint analysis. The app leverages AI and advanced analytics to help conservationists protect wildlife across the globe"
+        description="Engineered the web platform for WildTrackAI, enabling real-time tracking and monitoring of endangered species through footprint analysis. The web leverages AI and advanced analytics to help conservationists protect wildlife across the globe"
         buttonText="View project"
         buttonLink="https://www.wildtrack.org/"
         model={{
@@ -189,7 +189,7 @@ export const Home = () => {
             visible={visibleSections.includes(projectFour.current)}
             index={4}
             title="Crossover Health: Bridging Healthcare and Technology"
-            description="I worked on the mobile application for Crossover Health, which provides a comprehensive platform that integrates health services, virtual care, and in-person care experiences. Available on both Android and iOS, the app enhances patient engagement and facilitates seamless communication with healthcare professionals."
+            description="I worked on the web application for Crossover Health, which provides a comprehensive platform that integrates health services, virtual care, and in-person care experiences. Available on both Android and iOS, the app enhances patient engagement and facilitates seamless communication with healthcare professionals."
             buttonText="View project"
             buttonLink="https://crossoverhealth.com/"
             model={{
@@ -212,13 +212,13 @@ export const Home = () => {
             sectionRef={projectFive}
             visible={visibleSections.includes(projectFive.current)}
             index={5}
-            title="RodeoResults: The Ultimate Rodeo Tracking App"
-            description="RodeoResults is a specialized app designed for rodeo athletes, fans, and event organizers to track live rodeo results, standings, and event schedules. I contributed to enhancing the app's user interface and optimizing its performance across both Android and iOS platforms."
+            title="RodeoResults: The Ultimate Rodeo Tracking"
+            description="RodeoResults is a specialized web designed for rodeo athletes, fans, and event organizers to track live rodeo results, standings, and event schedules. I contributed to enhancing the web's user interface and optimizing its performance across cross browser."
             buttonText="View project"
             buttonLink="https://www.rodeoresults.com/"
             model={{
                 type: 'phone',
-                alt: 'RodeoResults: The Ultimate Rodeo Tracking App',
+                alt: 'RodeoResults: The Ultimate Rodeo Tracking',
                 textures: [
                     {
                         srcSet: `${rodeoOne} 375w, ${rodeoOne} 750w`,
@@ -237,7 +237,7 @@ export const Home = () => {
             visible={visibleSections.includes(projectSix.current)}
             index={5}
             title="Surrogacy Together: Building Families through Connection"
-            description="I collaborated on the development of the Surrogacy Together app, a platform dedicated to helping families navigate the surrogacy process. The app connects intended parents, surrogates, and experts, providing a community and resources to support their journeys."
+            description="I collaborated on the development of the Surrogacy Together website, a platform dedicated to helping families navigate the surrogacy process. The web connects intended parents, surrogates, and experts, providing a community and resources to support their journeys."
             buttonText="View project"
             buttonLink="https://thebiggestask.com/"
             model={{
@@ -261,7 +261,7 @@ export const Home = () => {
             visible={visibleSections.includes(projectSeven.current)}
             index={6}
             title="AdminSports: Simplifying Sports League Management"
-            description="AdminSports is a comprehensive solution for managing sports leagues, from registrations to scheduling and scorekeeping. I was involved in building and optimizing the mobile app to deliver a seamless experience for administrators, coaches, and players."
+            description="AdminSports is a comprehensive solution for managing sports leagues, from registrations to scheduling and scorekeeping. I was involved in building and optimizing the website to deliver a seamless experience for administrators, coaches, and players."
             buttonText="View project"
             buttonLink="https://adminsports.com/"
             model={{
@@ -285,7 +285,7 @@ export const Home = () => {
             visible={visibleSections.includes(projectEight.current)}
             index={7}
             title="AfricanOneStop: Your Gateway to African Products and Services"
-            description="I contributed to the development of AfricanOneStop, a mobile platform designed to connect users with a wide range of African products, services, and businesses. The app offers an easy-to-use interface and a seamless shopping experience for users across the continent and beyond. Available on both Android and iOS, it brings African commerce to the global stage."
+            description="I contributed to the development of AfricanOneStop, a web designed to connect users with a wide range of African products, services, and businesses. The web offers an easy-to-use interface and a seamless shopping experience for users across the continent and beyond. It's also available on both Android and iOS, it brings African commerce to the global stage."
             buttonText="View project"
             buttonLink="https://africaonestop.com/"
             model={{

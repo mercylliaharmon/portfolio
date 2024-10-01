@@ -35,20 +35,6 @@ const ProfileText = ({ visible, titleId }) => (
       <Text style={{marginTop: 20, marginBottom: 20}}>
           I'm passionate about helping businesses thrive online and am always ready to take on new challenges in web development.
       </Text>
-    {/*<Text className={styles.description} data-visible={visible} size="l" as="p">*/}
-    {/*    I'm Mercy, a passionate Solution Architect and Mobile App Engineer with over three years of experience specializing in React Native and Flutter. I’ve successfully completed more than 10 mobile applications, generating over $500K in revenue.*/}
-
-    {/*    My expertise lies in crafting scalable and high-performance apps that prioritize user experience and robust functionality. I thrive on bridging the gap between business goals and technical execution, designing innovative solutions that drive both engagement and revenue.*/}
-    {/*   My projects include UX design, UI*/}
-    {/*  animations, and icon illustration. Being comfortable with code allows me to rapidly*/}
-    {/*  prototype and validate experiences. If you’re interested in the tools and software I*/}
-    {/*  use check out my <Link href="/uses">uses page</Link>.*/}
-    {/*</Text>*/}
-    {/*<Text className={styles.description} data-visible={visible} size="l" as="p">*/}
-    {/*  In my spare time I like to practice Brazilian Jiu Jitsu, play video games, and{' '}*/}
-    {/*  <Link href="/projects/volkihar-knight">make mods</Link>. I’m always down for hearing*/}
-    {/*  about new projects, so feel free to drop me a line.*/}
-    {/*</Text>*/}
   </Fragment>
 );
 
