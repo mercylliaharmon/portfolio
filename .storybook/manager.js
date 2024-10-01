@@ -5,7 +5,7 @@ addons.setConfig({
   theme: {
     ...themes.dark,
     brandImage: './icon.svg',
-    brandTitle: 'Mercy Harmon',
-    brandUrl: 'https://mercyharmon.dev',
+    brandTitle: 'Cherif Fall',
+    brandUrl: 'https://cherrifall.dev',
   },
 });

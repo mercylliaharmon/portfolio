@@ -21,19 +21,19 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
       <Text>
-          I'm Mercy, a dedicated <strong>Solution Architect and Mobile App Engineer</strong> with expertise in <strong>React Native</strong> and <strong>Flutter</strong>. Over the past three years, I've delivered 10+ successful apps that have generated over $500K in revenue.
+          I'm Cherif, a skilled <strong>Web Developer and Designer</strong> with expertise in <strong>HTML, React, Laravel, Wordpress, WebFlow, and Shopify</strong>. With a passion for creating visually appealing and functional websites, I've successfully delivered a variety of projects across multiple platforms.
       </Text>
       <Text style={{marginTop: 20, marginBottom: 20}}>
-          I focus on creating user-centric, scalable applications that blend innovation with performance, ensuring each solution meets real business needs.
+          I specialize in building responsive, user-friendly websites that drive engagement and meet business objectives through modern web technologies.
       </Text>
       <Text as="h2">Highlights:</Text>
       <ul>
-          <li><Text><strong>Cross-Platform Mastery</strong>: Expert in delivering seamless experiences on both iOS and Android.</Text></li>
-          <li><Text><strong>Revenue Impact</strong>: Proven track record of generating significant revenue through effective app solutions.</Text></li>
-          <li><Text><strong>Client Focused</strong>: I prioritize understanding client needs to craft solutions that drive success.</Text></li>
+          <li><Text><strong>Full-Stack Expertise</strong>: Proficient in both front-end and back-end development for a complete web experience.</Text></li>
+          <li><Text><strong>E-Commerce Solutions</strong>: Extensive experience in building and optimizing Shopify stores and other e-commerce platforms.</Text></li>
+          <li><Text><strong>Design-Focused</strong>: A keen eye for design, ensuring websites not only function well but also look great.</Text></li>
       </ul>
       <Text style={{marginTop: 20, marginBottom: 20}}>
-          I'm passionate about pushing the boundaries of mobile development and am excited for the next challenge!
+          I'm passionate about helping businesses thrive online and am always ready to take on new challenges in web development.
       </Text>
     {/*<Text className={styles.description} data-visible={visible} size="l" as="p">*/}
     {/*    I'm Mercy, a passionate Solution Architect and Mobile App Engineer with over three years of experience specializing in React Native and Flutter. I’ve successfully completed more than 10 mobile applications, generating over $500K in revenue.*/}

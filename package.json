@@ -1,9 +1,9 @@
 {
   "name": "portfolio",
-  "homepage": "https://mercyharmon.dev",
-  "description": "Portfolio site for Mercy Harmon",
+  "homepage": "https://cheriffall.dev",
+  "description": "Portfolio site for Cherif Fall",
   "repository": "https://github.com/FullStackDevCoach",
-  "author": "Mercy Harmon",
+  "author": "Cherif Fall",
   "sideEffects": true,
   "type": "module",
   "scripts": {
@@ -11,7 +11,7 @@
     "dev": "node ./scripts/dev.cjs && remix vite:dev",
     "start": "wrangler pages dev ./build/client",
     "postinstall": "node ./scripts/draco.cjs",
-    "deploy": "npm run build && wrangler pages deploy ./build/client --project-name mercy",
+    "deploy": "npm run build && wrangler pages deploy ./build/client --project-name cherif",
     "dev:storybook": "storybook dev -p 6006",
     "build:storybook": "storybook build",
     "deploy:storybook": "wrangler pages deploy ./storybook-static --project-name portfolio-storybook --branch main"
