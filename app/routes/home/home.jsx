@@ -62,13 +62,10 @@ export const Home = () => {
   const projectThree = useRef();
   const projectFour = useRef();
   const projectFive = useRef();
-  const projectSix = useRef();
-  const projectSeven = useRef();
-  const projectEight = useRef();
   const details = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix, projectSeven, projectEight, details];
+    const sections = [intro, projectOne, projectTwo, projectThree, projectFour, projectFive, details];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -183,59 +180,59 @@ export const Home = () => {
           ],
         }}
       />
+        {/*<ProjectSummary*/}
+        {/*    id="project-4"*/}
+        {/*    sectionRef={projectFour}*/}
+        {/*    visible={visibleSections.includes(projectFour.current)}*/}
+        {/*    index={4}*/}
+        {/*    title="Crossover Health: Bridging Healthcare and Technology"*/}
+        {/*    description="I worked on the mobile application for Crossover Health, which provides a comprehensive platform that integrates health services, virtual care, and in-person care experiences. Available on both Android and iOS, the app enhances patient engagement and facilitates seamless communication with healthcare professionals."*/}
+        {/*    buttonText="View project"*/}
+        {/*    buttonLink="https://crossoverhealth.com/"*/}
+        {/*    model={{*/}
+        {/*        type: 'phone',*/}
+        {/*        alt: 'Crossover Health: Bridging Healthcare and Technology',*/}
+        {/*        textures: [*/}
+        {/*            {*/}
+        {/*                srcSet: `${crossOverOne} 375w, ${crossOverOne} 750w`,*/}
+        {/*                placeholder: gamestackTexturePlaceholder,*/}
+        {/*            },*/}
+        {/*            {*/}
+        {/*                srcSet: `${crossOverTwo} 375w, ${crossOverTwo} 750w`,*/}
+        {/*                placeholder: gamestackTexture2Placeholder,*/}
+        {/*            },*/}
+        {/*        ],*/}
+        {/*    }}*/}
+        {/*/>*/}
+        {/*<ProjectSummary*/}
+        {/*    id="project-5"*/}
+        {/*    sectionRef={projectFive}*/}
+        {/*    visible={visibleSections.includes(projectFive.current)}*/}
+        {/*    index={5}*/}
+        {/*    title="RodeoResults: The Ultimate Rodeo Tracking App"*/}
+        {/*    description="RodeoResults is a specialized app designed for rodeo athletes, fans, and event organizers to track live rodeo results, standings, and event schedules. I contributed to enhancing the app's user interface and optimizing its performance across both Android and iOS platforms."*/}
+        {/*    buttonText="View project"*/}
+        {/*    buttonLink="https://www.rodeoresults.com/"*/}
+        {/*    model={{*/}
+        {/*        type: 'phone',*/}
+        {/*        alt: 'RodeoResults: The Ultimate Rodeo Tracking App',*/}
+        {/*        textures: [*/}
+        {/*            {*/}
+        {/*                srcSet: `${rodeoOne} 375w, ${rodeoOne} 750w`,*/}
+        {/*                placeholder: gamestackTexturePlaceholder,*/}
+        {/*            },*/}
+        {/*            {*/}
+        {/*                srcSet: `${rodeoTwo} 375w, ${rodeoTwo} 750w`,*/}
+        {/*                placeholder: gamestackTexture2Placeholder,*/}
+        {/*            },*/}
+        {/*        ],*/}
+        {/*    }}*/}
+        {/*/>*/}
         <ProjectSummary
             id="project-4"
             sectionRef={projectFour}
             visible={visibleSections.includes(projectFour.current)}
             index={4}
-            title="Crossover Health: Bridging Healthcare and Technology"
-            description="I worked on the mobile application for Crossover Health, which provides a comprehensive platform that integrates health services, virtual care, and in-person care experiences. Available on both Android and iOS, the app enhances patient engagement and facilitates seamless communication with healthcare professionals."
-            buttonText="View project"
-            buttonLink="https://crossoverhealth.com/"
-            model={{
-                type: 'phone',
-                alt: 'Crossover Health: Bridging Healthcare and Technology',
-                textures: [
-                    {
-                        srcSet: `${crossOverOne} 375w, ${crossOverOne} 750w`,
-                        placeholder: gamestackTexturePlaceholder,
-                    },
-                    {
-                        srcSet: `${crossOverTwo} 375w, ${crossOverTwo} 750w`,
-                        placeholder: gamestackTexture2Placeholder,
-                    },
-                ],
-            }}
-        />
-        <ProjectSummary
-            id="project-5"
-            sectionRef={projectFive}
-            visible={visibleSections.includes(projectFive.current)}
-            index={5}
-            title="RodeoResults: The Ultimate Rodeo Tracking App"
-            description="RodeoResults is a specialized app designed for rodeo athletes, fans, and event organizers to track live rodeo results, standings, and event schedules. I contributed to enhancing the app's user interface and optimizing its performance across both Android and iOS platforms."
-            buttonText="View project"
-            buttonLink="https://www.rodeoresults.com/"
-            model={{
-                type: 'phone',
-                alt: 'RodeoResults: The Ultimate Rodeo Tracking App',
-                textures: [
-                    {
-                        srcSet: `${rodeoOne} 375w, ${rodeoOne} 750w`,
-                        placeholder: gamestackTexturePlaceholder,
-                    },
-                    {
-                        srcSet: `${rodeoTwo} 375w, ${rodeoTwo} 750w`,
-                        placeholder: gamestackTexture2Placeholder,
-                    },
-                ],
-            }}
-        />
-        <ProjectSummary
-            id="project-5"
-            sectionRef={projectSix}
-            visible={visibleSections.includes(projectSix.current)}
-            index={5}
             title="Surrogacy Together: Building Families through Connection"
             description="I collaborated on the development of the Surrogacy Together app, a platform dedicated to helping families navigate the surrogacy process. The app connects intended parents, surrogates, and experts, providing a community and resources to support their journeys."
             buttonText="View project"
@@ -255,35 +252,35 @@ export const Home = () => {
                 ],
             }}
         />
+        {/*<ProjectSummary*/}
+        {/*    id="project-6"*/}
+        {/*    sectionRef={projectSeven}*/}
+        {/*    visible={visibleSections.includes(projectSeven.current)}*/}
+        {/*    index={6}*/}
+        {/*    title="AdminSports: Simplifying Sports League Management"*/}
+        {/*    description="AdminSports is a comprehensive solution for managing sports leagues, from registrations to scheduling and scorekeeping. I was involved in building and optimizing the mobile app to deliver a seamless experience for administrators, coaches, and players."*/}
+        {/*    buttonText="View project"*/}
+        {/*    buttonLink="https://adminsports.com/"*/}
+        {/*    model={{*/}
+        {/*        type: 'phone',*/}
+        {/*        alt: 'AdminSports: Simplifying Sports League Management',*/}
+        {/*        textures: [*/}
+        {/*            {*/}
+        {/*                srcSet: `${adminOne} 375w, ${adminOne} 750w`,*/}
+        {/*                placeholder: gamestackTexturePlaceholder,*/}
+        {/*            },*/}
+        {/*            {*/}
+        {/*                srcSet: `${adminTwo} 375w, ${adminTwo} 750w`,*/}
+        {/*                placeholder: gamestackTexture2Placeholder,*/}
+        {/*            },*/}
+        {/*        ],*/}
+        {/*    }}*/}
+        {/*/>*/}
         <ProjectSummary
-            id="project-6"
-            sectionRef={projectSeven}
-            visible={visibleSections.includes(projectSeven.current)}
-            index={6}
-            title="AdminSports: Simplifying Sports League Management"
-            description="AdminSports is a comprehensive solution for managing sports leagues, from registrations to scheduling and scorekeeping. I was involved in building and optimizing the mobile app to deliver a seamless experience for administrators, coaches, and players."
-            buttonText="View project"
-            buttonLink="https://adminsports.com/"
-            model={{
-                type: 'phone',
-                alt: 'AdminSports: Simplifying Sports League Management',
-                textures: [
-                    {
-                        srcSet: `${adminOne} 375w, ${adminOne} 750w`,
-                        placeholder: gamestackTexturePlaceholder,
-                    },
-                    {
-                        srcSet: `${adminTwo} 375w, ${adminTwo} 750w`,
-                        placeholder: gamestackTexture2Placeholder,
-                    },
-                ],
-            }}
-        />
-        <ProjectSummary
-            id="project-7"
-            sectionRef={projectEight}
-            visible={visibleSections.includes(projectEight.current)}
-            index={7}
+            id="project-5"
+            sectionRef={projectFive}
+            visible={visibleSections.includes(projectFive.current)}
+            index={5}
             title="AfricanOneStop: Your Gateway to African Products and Services"
             description="I contributed to the development of AfricanOneStop, a mobile platform designed to connect users with a wide range of African products, services, and businesses. The app offers an easy-to-use interface and a seamless shopping experience for users across the continent and beyond. Available on both Android and iOS, it brings African commerce to the global stage."
             buttonText="View project"

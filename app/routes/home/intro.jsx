@@ -6,7 +6,7 @@ import { tokens } from '~/components/theme-provider/theme';
 import { Transition } from '~/components/transition';
 import { VisuallyHidden } from '~/components/visually-hidden';
 import { Link as RouterLink } from '@remix-run/react';
-import { useInterval, usePrevious, useScrollToHash } from '~/hooks';
+import {useInterval, usePrevious, useScrollToHash, useWindowSize} from '~/hooks';
 import { Suspense, lazy, useEffect, useState } from 'react';
 import { cssProps } from '~/utils/style';
 import config from '~/config.json';
@@ -29,6 +29,7 @@ export function Intro({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
   const titleId = `${id}-title`;
   const scrollToHash = useScrollToHash();
   const isHydrated = useHydrated();
+  const windowSize = useWindowSize();
 
   useInterval(
     () => {
@@ -72,44 +73,46 @@ export function Intro({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
               <h1 className={styles.name} data-visible={visible} id={titleId}>
                 <DecoderText text={config.name} delay={500} />
               </h1>
-              <Heading level={0} as="h2" className={styles.title}>
-                <VisuallyHidden className={styles.label}>
-                  {`${config.role} + ${introLabel}`}
-                </VisuallyHidden>
-                <span aria-hidden className={styles.row}>
+              <div style={{overflow: 'hidden', width: windowSize.width <= 1024 ? windowSize.width : windowSize.width * 0.6}}>
+                <Heading level={0} as="h2" className={styles.title}>
+                  <VisuallyHidden className={styles.label}>
+                    {`${config.role} + ${introLabel}`}
+                  </VisuallyHidden>
+                  <span aria-hidden className={styles.row}>
                   <span
-                    className={styles.word}
-                    data-status={status}
-                    style={cssProps({ delay: tokens.base.durationXS })}
+                      className={styles.word}
+                      data-status={status}
+                      style={cssProps({ delay: tokens.base.durationXS })}
                   >
                     {config.role}
                   </span>
-                  <span className={styles.line} data-status={status} />
+                    {/*<span className={styles.line} data-status={status} />*/}
                 </span>
-                <div className={styles.row}>
-                  {disciplines.map(item => (
-                    <Transition
-                      unmount
-                      in={item === currentDiscipline}
-                      timeout={{ enter: 3000, exit: 2000 }}
-                      key={item}
-                    >
-                      {({ status, nodeRef }) => (
-                        <span
-                          aria-hidden
-                          ref={nodeRef}
-                          className={styles.word}
-                          data-plus={true}
-                          data-status={status}
-                          style={cssProps({ delay: tokens.base.durationL })}
+                  <div className={styles.row}>
+                    {disciplines.map(item => (
+                        <Transition
+                            unmount
+                            in={item === currentDiscipline}
+                            timeout={{ enter: 3000, exit: 2000 }}
+                            key={item}
                         >
+                          {({ status, nodeRef }) => (
+                              <p
+                                  aria-hidden
+                                  ref={nodeRef}
+                                  className={styles.word}
+                                  data-plus={true}
+                                  data-status={status}
+                                  style={cssProps({ delay: tokens.base.durationL })}
+                              >
                           {item}
-                        </span>
-                      )}
-                    </Transition>
-                  ))}
-                </div>
-              </Heading>
+                        </p>
+                          )}
+                        </Transition>
+                    ))}
+                  </div>
+                </Heading>
+              </div>
             </header>
             <RouterLink
               to="/#project-1"

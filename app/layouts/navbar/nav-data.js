@@ -6,7 +6,7 @@ export const navLinks = [
     pathname: '/#project-1',
   },
   {
-    label: 'Details',
+    label: 'About Me',
     pathname: '/#details',
   },
   // {
@@ -20,6 +20,11 @@ export const navLinks = [
 ];
 
 export const socialLinks = [
+  {
+    label: 'Download Resume',
+    url: `/mercy-harmon.pdf`,
+    icon: 'resume',
+  },
   {
     label: 'LinkedIn',
     url: `https://www.linkedin.com/in/mercyharmon/`,

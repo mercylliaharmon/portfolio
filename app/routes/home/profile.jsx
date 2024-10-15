@@ -72,6 +72,9 @@ export const Profile = ({ id, visible, sectionRef }) => {
           <div className={styles.content} ref={nodeRef}>
             <div className={styles.column}>
               <ProfileText visible={visible} titleId={titleId} />
+              {/*<div style={{marginTop: 20, marginBottom: 30}}>*/}
+              {/*    <a style={{color: 'white'}} target={'_blank'} href={'/mercy-harmon.pdf'}>Download My Resume</a>*/}
+              {/*</div>*/}
               <Button
                 secondary
                 className={styles.button}
