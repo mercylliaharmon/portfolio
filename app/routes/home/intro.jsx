@@ -84,7 +84,7 @@ export function Intro({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
                   >
                     {config.role}
                   </span>
-                  <span className={styles.line} data-status={status} />
+                  {/*<span className={styles.line} data-status={status} />*/}
                 </span>
                 <div className={styles.row}>
                   {disciplines.map(item => (

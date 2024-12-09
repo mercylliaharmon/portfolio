@@ -1,22 +1,15 @@
 
 import gamestackTexture2Placeholder from '~/assets/gamestack-list-placeholder.jpg';
 import gamestackTexturePlaceholder from '~/assets/gamestack-login-placeholder.jpg';
-import wildtrackHome from '~/assets/projects/wildtrack-home.png';
-import wildtrackObservation from '~/assets/projects/wildtrack-observation.png';
 import femaAlert from '~/assets/projects/fema-alert.jpg';
-import femaList from '~/assets/projects/fema-list.jpg';
-import bartesianHome from '~/assets/projects/bartesian-home.jpg';
-import bartesianMenu from '~/assets/projects/bartesian-menu.jpg';
 import africaOne from '~/assets/projects/onestop-1.jpeg';
 import africaTwo from '~/assets/projects/onestop-2.jpeg';
-import rodeoOne from '~/assets/projects/rodeo-1.jpg';
-import rodeoTwo from '~/assets/projects/rodeo-2.jpg';
-import adminOne from '~/assets/projects/adminsports-1.jpg';
-import adminTwo from '~/assets/projects/adminsports-2.jpg';
 import surrogacyOne from '~/assets/projects/surrogacy-1.jpeg';
 import surrogacyTwo from '~/assets/projects/surrogacy-2.jpeg';
-import crossOverOne from '~/assets/projects/crossover-1.jpg';
-import crossOverTwo from '~/assets/projects/crossover-2.jpg';
+import sageOne from '~/assets/projects/sage-1.png';
+import sageTwo from '~/assets/projects/sage-2.png';
+import managingOne from '~/assets/projects/managingportfolios-1.png';
+import managingTwo from '~/assets/projects/managingportfolios-2.png';
 import { Footer } from '~/components/footer';
 import { baseMeta } from '~/utils/meta';
 import { Intro } from './intro';
@@ -48,7 +41,7 @@ export const links = () => {
 
 export const meta = () => {
   return baseMeta({
-    title: 'Sr. Web Engineer',
+    title: 'Sr. WordPress Engineer',
     description: `Design portfolio of ${config.name} — a web engineer working on frontend & backend with a focus on motion, experience design, and accessibility.`,
   });
 };
@@ -61,14 +54,10 @@ export const Home = () => {
   const projectTwo = useRef();
   const projectThree = useRef();
   const projectFour = useRef();
-  const projectFive = useRef();
-  const projectSix = useRef();
-  const projectSeven = useRef();
-  const projectEight = useRef();
   const details = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix, projectSeven, projectEight, details];
+    const sections = [intro, projectOne, projectTwo, projectThree, projectFour, details];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -110,131 +99,10 @@ export const Home = () => {
         sectionRef={intro}
         scrollIndicatorHidden={scrollIndicatorHidden}
       />
-      <ProjectSummary
-        id="project-1"
-        sectionRef={projectOne}
-        visible={visibleSections.includes(projectOne.current)}
-        index={1}
-        title="FEMA: Disaster Preparedness and Recovery"
-        description="Contributed to the development of FEMA's official mobile app, which helps users prepare for, respond to, and recover from disasters. The app provides real-time weather alerts, emergency tips, and access to disaster recovery centers."
-        buttonText="View project"
-        buttonLink="https://www.fema.gov/"
-        model={{
-          type: 'phone',
-          alt: 'FEMA: Disaster Preparedness and Recovery',
-          textures: [
-              {
-                  srcSet: `${femaAlert} 375w, ${femaAlert} 750w`,
-                  placeholder: gamestackTexturePlaceholder,
-              },
-              {
-                  srcSet: `${femaList} 375w, ${femaList} 750w`,
-                  placeholder: gamestackTexture2Placeholder,
-              },
-          ],
-        }}
-      />
-      <ProjectSummary
-        id="project-2"
-        alternate
-        sectionRef={projectTwo}
-        visible={visibleSections.includes(projectTwo.current)}
-        index={2}
-        title="Bartesian: The World’s Top-Selling Cocktail System"
-        description="Developed the website for Bartesian, the award-winning cocktail maker that allows users to create premium cocktails at home. The website enhances the user experience by providing recipe suggestions, smart device connectivity, and automated cocktail customization based on user preferences."
-        buttonText="View project"
-        buttonLink="https://bartesian.com/ "
-        model={{
-          type: 'phone',
-          alt: 'Bartesian: The World’s Top-Selling Cocktail System',
-          textures: [
-            {
-              srcSet: `${bartesianHome} 375w, ${bartesianHome} 750w`,
-              placeholder: gamestackTexturePlaceholder,
-            },
-            {
-              srcSet: `${bartesianMenu} 375w, ${bartesianMenu} 750w`,
-              placeholder: gamestackTexture2Placeholder,
-            },
-          ],
-        }}
-      />
-      <ProjectSummary
-        id="project-3"
-        sectionRef={projectThree}
-        visible={visibleSections.includes(projectThree.current)}
-        index={3}
-        title="WildTrackAI: Protecting Endangered Species"
-        description="Engineered the web platform for WildTrackAI, enabling real-time tracking and monitoring of endangered species through footprint analysis. The web leverages AI and advanced analytics to help conservationists protect wildlife across the globe"
-        buttonText="View project"
-        buttonLink="https://www.wildtrack.org/"
-        model={{
-          type: 'phone',
-          alt: 'WildTrackAI: Protecting Endangered Species',
-          textures: [
-              {
-                  srcSet: `${wildtrackHome} 375w, ${wildtrackHome} 750w`,
-                  placeholder: gamestackTexturePlaceholder,
-              },
-              {
-                  srcSet: `${wildtrackObservation} 375w, ${wildtrackObservation} 750w`,
-                  placeholder: gamestackTexture2Placeholder,
-              },
-          ],
-        }}
-      />
         <ProjectSummary
-            id="project-4"
-            sectionRef={projectFour}
-            visible={visibleSections.includes(projectFour.current)}
-            index={4}
-            title="Crossover Health: Bridging Healthcare and Technology"
-            description="I worked on the web application for Crossover Health, which provides a comprehensive platform that integrates health services, virtual care, and in-person care experiences. Available on both Android and iOS, the app enhances patient engagement and facilitates seamless communication with healthcare professionals."
-            buttonText="View project"
-            buttonLink="https://crossoverhealth.com/"
-            model={{
-                type: 'phone',
-                alt: 'Crossover Health: Bridging Healthcare and Technology',
-                textures: [
-                    {
-                        srcSet: `${crossOverOne} 375w, ${crossOverOne} 750w`,
-                        placeholder: gamestackTexturePlaceholder,
-                    },
-                    {
-                        srcSet: `${crossOverTwo} 375w, ${crossOverTwo} 750w`,
-                        placeholder: gamestackTexture2Placeholder,
-                    },
-                ],
-            }}
-        />
-        <ProjectSummary
-            id="project-5"
-            sectionRef={projectFive}
-            visible={visibleSections.includes(projectFive.current)}
-            index={5}
-            title="RodeoResults: The Ultimate Rodeo Tracking"
-            description="RodeoResults is a specialized web designed for rodeo athletes, fans, and event organizers to track live rodeo results, standings, and event schedules. I contributed to enhancing the web's user interface and optimizing its performance across cross browser."
-            buttonText="View project"
-            buttonLink="https://www.rodeoresults.com/"
-            model={{
-                type: 'phone',
-                alt: 'RodeoResults: The Ultimate Rodeo Tracking',
-                textures: [
-                    {
-                        srcSet: `${rodeoOne} 375w, ${rodeoOne} 750w`,
-                        placeholder: gamestackTexturePlaceholder,
-                    },
-                    {
-                        srcSet: `${rodeoTwo} 375w, ${rodeoTwo} 750w`,
-                        placeholder: gamestackTexture2Placeholder,
-                    },
-                ],
-            }}
-        />
-        <ProjectSummary
-            id="project-5"
-            sectionRef={projectSix}
-            visible={visibleSections.includes(projectSix.current)}
+            id="project-1"
+            sectionRef={projectOne}
+            visible={visibleSections.includes(projectOne.current)}
             index={5}
             title="Surrogacy Together: Building Families through Connection"
             description="I collaborated on the development of the Surrogacy Together website, a platform dedicated to helping families navigate the surrogacy process. The web connects intended parents, surrogates, and experts, providing a community and resources to support their journeys."
@@ -255,42 +123,42 @@ export const Home = () => {
                 ],
             }}
         />
+      <ProjectSummary
+        id="project-2"
+        sectionRef={projectTwo}
+        visible={visibleSections.includes(projectTwo.current)}
+        index={1}
+        title="SAGE: Protecting Your Home & Family"
+        description="As a developer, I enhanced the pest control website by creating a responsive design, integrating dynamic features for service exploration, and optimizing performance for seamless user experience. I implemented SEO strategies to improve visibility and secure contact forms for user safety, delivering a functional, user-friendly platform for tailored pest control solutions."
+        buttonText="View project"
+        buttonLink="https://sage.mystagingwebsite.com/"
+        model={{
+          type: 'phone',
+          alt: 'SAGE: Protecting Your Home & Family',
+          textures: [
+              {
+                  srcSet: `${sageOne} 375w, ${sageOne} 750w`,
+                  placeholder: gamestackTexturePlaceholder,
+              },
+              {
+                  srcSet: `${sageTwo} 375w, ${sageTwo} 750w`,
+                  placeholder: gamestackTexture2Placeholder,
+              },
+          ],
+        }}
+      />
         <ProjectSummary
-            id="project-6"
-            sectionRef={projectSeven}
-            visible={visibleSections.includes(projectSeven.current)}
-            index={6}
-            title="AdminSports: Simplifying Sports League Management"
-            description="AdminSports is a comprehensive solution for managing sports leagues, from registrations to scheduling and scorekeeping. I was involved in building and optimizing the website to deliver a seamless experience for administrators, coaches, and players."
-            buttonText="View project"
-            buttonLink="https://adminsports.com/"
-            model={{
-                type: 'phone',
-                alt: 'AdminSports: Simplifying Sports League Management',
-                textures: [
-                    {
-                        srcSet: `${adminOne} 375w, ${adminOne} 750w`,
-                        placeholder: gamestackTexturePlaceholder,
-                    },
-                    {
-                        srcSet: `${adminTwo} 375w, ${adminTwo} 750w`,
-                        placeholder: gamestackTexture2Placeholder,
-                    },
-                ],
-            }}
-        />
-        <ProjectSummary
-            id="project-7"
-            sectionRef={projectEight}
-            visible={visibleSections.includes(projectEight.current)}
+            id="project-3"
+            sectionRef={projectThree}
+            visible={visibleSections.includes(projectThree.current)}
             index={7}
-            title="AfricanOneStop: Your Gateway to African Products and Services"
+            title="FamilyRubies: Your Gateway to African Products and Services"
             description="I contributed to the development of AfricanOneStop, a web designed to connect users with a wide range of African products, services, and businesses. The web offers an easy-to-use interface and a seamless shopping experience for users across the continent and beyond. It's also available on both Android and iOS, it brings African commerce to the global stage."
             buttonText="View project"
-            buttonLink="https://africaonestop.com/"
+            buttonLink="https://www.familyrubies.com/"
             model={{
                 type: 'phone',
-                alt: 'AfricanOneStop: Your Gateway to African Products and Services',
+                alt: 'FamilyRubies: Your Gateway to African Products and Services',
                 textures: [
                     {
                         srcSet: `${africaOne} 375w, ${africaOne} 750w`,
@@ -303,6 +171,31 @@ export const Home = () => {
                 ],
             }}
         />
+      <ProjectSummary
+        id="project-4"
+        alternate
+        sectionRef={projectFour}
+        visible={visibleSections.includes(projectFour.current)}
+        index={2}
+        title="Managing Portfolios"
+        description="As a contributor, I developed and optimized the platform's structure, ensuring a seamless user experience. I implemented responsive design, integrated interactive elements, and enhanced performance to deliver a reliable, user-friendly resource for project portfolio management excellence."
+        buttonText="View project"
+        buttonLink="https://managingportfolios.com/"
+        model={{
+          type: 'phone',
+          alt: 'Managing Portfolios',
+          textures: [
+            {
+              srcSet: `${managingOne} 375w, ${managingOne} 750w`,
+              placeholder: gamestackTexturePlaceholder,
+            },
+            {
+              srcSet: `${managingTwo} 375w, ${managingTwo} 750w`,
+              placeholder: gamestackTexture2Placeholder,
+            },
+          ],
+        }}
+      />
       <Profile
         sectionRef={details}
         visible={visibleSections.includes(details.current)}
