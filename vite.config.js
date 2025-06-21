@@ -17,7 +17,12 @@ const isStorybook = process.argv[1]?.includes('storybook');
 export default defineConfig({
   assetsInclude: ['**/*.glb', '**/*.hdr', '**/*.glsl', '**/*.woff', '**/*.woff2', '**/*.ttf', '**/*.otf', '**/*.eot'], // Include font formats
   build: {
-    assetsInlineLimit: 4096,
+    assetsInlineLimit: 0, // Prevent inlining issues
+    rollupOptions: {
+      output: {
+        assetFileNames: 'assets/[name]-[hash][extname]',
+      },
+    },
   },
   server: {
     port: 7777,

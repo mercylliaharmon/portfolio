@@ -73,7 +73,11 @@ export function Intro({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
               <h1 className={styles.name} data-visible={visible} id={titleId}>
                 <DecoderText text={config.name} delay={500} />
               </h1>
-              <div style={{overflow: 'hidden', width: windowSize.width <= 1024 ? windowSize.width : windowSize.width * 0.6}}>
+              <div style={{overflow: 'hidden', width: (() => {
+                const width = windowSize.width;
+                if (!width || isNaN(width)) return 'auto';
+                return width <= 1024 ? width : width * 0.6;
+              })()}}>
                 <Heading level={0} as="h2" className={styles.title}>
                   <VisuallyHidden className={styles.label}>
                     {`${config.role} + ${introLabel}`}

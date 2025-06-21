@@ -38,6 +38,9 @@ export const links = () => [
     type: 'font/woff2',
     crossOrigin: '',
   },
+  { rel: 'stylesheet', href: styles },
+  { rel: 'stylesheet', href: styles2 },
+  { rel: 'stylesheet', href: styles3 },
   { rel: 'manifest', href: '/manifest.json' },
   { rel: 'icon', href: '/favicon.ico' },
   { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' },
@@ -72,7 +75,7 @@ export const loader = async ({ request, context }) => {
     {
       headers: {
         'Set-Cookie': await commitSession(session),
-        'Content-Security-Policy': "default-src 'self'; object-src 'self'; script-src 'self' 'unsafe-eval';"
+        'Content-Security-Policy': "default-src 'self'; object-src 'self'; script-src 'self' 'unsafe-eval'; font-src 'self' data:; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline';"
       },
     }
   );

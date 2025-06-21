@@ -29,7 +29,7 @@ void main() {
 
     vec2 distortedPosition2 = vec2(
       uv.x - direction * ((1.0 - dispFactor) * (orig1.r * intensity)),
-      uv.y - direction * ((1.0 - dispFactor) * (orig1 * intensity))
+      uv.y - direction * ((1.0 - dispFactor) * (orig1.r * intensity))
     );
 
     _currentImage = texture2D(currentImage, distortedPosition);
