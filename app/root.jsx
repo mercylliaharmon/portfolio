@@ -110,7 +110,7 @@ export default function App() {
         <Links />
         <link rel="canonical" href={canonicalUrl} />
       </head>
-      <body style={[styles2.container, styles3.container]} data-theme={theme}>
+      <body data-theme={theme}>
         <ThemeProvider theme={theme} toggleTheme={toggleTheme}>
           <Progress />
           <VisuallyHidden showOnFocus as="a" className={styles.skip} href="#main-content">

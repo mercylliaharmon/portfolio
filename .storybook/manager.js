@@ -5,7 +5,7 @@ addons.setConfig({
   theme: {
     ...themes.dark,
     brandImage: './icon.svg',
-    brandTitle: 'Mercy Harmon',
-    brandUrl: 'https://mercyharmon.dev',
+    brandTitle: 'HaoHua Huang',
+    brandUrl: 'https://baryhuang.dev',
   },
 });

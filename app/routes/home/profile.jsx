@@ -21,7 +21,7 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
       <Text>
-          I'm Mercy, a dedicated <strong>Solution Architect and Mobile App Engineer</strong> with expertise in <strong>React Native</strong> and <strong>Flutter</strong>. Over the past three years, I've delivered 10+ successful apps that have generated over $500K in revenue.
+          I'm HaoHua, a dedicated <strong>Solution Architect and Mobile App Engineer</strong> with expertise in <strong>React Native</strong> and <strong>Flutter</strong>. Over the past three years, I've delivered 10+ successful apps that have generated over $500K in revenue.
       </Text>
       <Text style={{marginTop: 20, marginBottom: 20}}>
           I focus on creating user-centric, scalable applications that blend innovation with performance, ensuring each solution meets real business needs.

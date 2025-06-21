@@ -29,20 +29,42 @@ export function Progress() {
     const controller = new AbortController();
 
     if (state !== 'idle') {
-      return setAnimationComplete(false);
+      setAnimationComplete(false);
+      return () => {
+        try {
+          if (!controller.signal.aborted) {
+            controller.abort();
+          }
+        } catch (error) {
+          // Ignore abort errors during cleanup
+        }
+      };
     }
 
-    Promise.all(
-      progressRef.current
-        .getAnimations({ subtree: true })
-        .map(animation => animation.finished)
-    ).then(() => {
-      if (controller.signal.aborted) return;
-      setAnimationComplete(true);
-    });
+    try {
+      Promise.all(
+        progressRef.current
+          .getAnimations({ subtree: true })
+          .map(animation => animation.finished)
+      ).then(() => {
+        if (controller.signal.aborted) return;
+        setAnimationComplete(true);
+      }).catch(() => {
+        // Ignore errors from aborted animations
+      });
+    } catch (error) {
+      // Handle any synchronous errors
+      console.warn('Error setting up animation listener:', error);
+    }
 
     return () => {
-      controller.abort();
+      try {
+        if (!controller.signal.aborted) {
+          controller.abort();
+        }
+      } catch (error) {
+        // Ignore abort errors during cleanup
+      }
     };
   }, [state]);
 

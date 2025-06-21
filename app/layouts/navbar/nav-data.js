@@ -20,19 +20,19 @@ export const navLinks = [
 ];
 
 export const socialLinks = [
-  {
-    label: 'Download Resume',
-    url: `/mercy-harmon.pdf`,
-    icon: 'resume',
-  },
+  // {
+  //   label: 'Download Resume',
+  //   url: `/mercy-harmon.pdf`,
+  //   icon: 'resume',
+  // },
   {
     label: 'LinkedIn',
-    url: `https://www.linkedin.com/in/mercyharmon/`,
+    url: `https://www.linkedin.com/in/baryhuang/`,
     icon: 'linkedin',
   },
   {
     label: 'Github',
-    url: ` https://github.com/FullStackDevCoach`,
+    url: `https://github.com/baryhuang`,
     icon: 'github',
   },
 ];
