@@ -41,7 +41,7 @@ export const links = () => {
 
 export const meta = () => {
   return baseMeta({
-    title: 'Sr. WordPress Engineer',
+    title: 'Sr. Javascript Engineer',
     description: `Design portfolio of ${config.name} — a web engineer working on frontend & backend with a focus on motion, experience design, and accessibility.`,
   });
 };
